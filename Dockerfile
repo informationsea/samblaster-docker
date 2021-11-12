@@ -27,7 +27,7 @@ RUN make -j4
 RUN make install
 
 FROM debian:11-slim
-RUN apt-get update -y && apt-get install -y libncurses5 libcurl4 liblzma5 bzip2 zlib1g libdigest-perl-md5-perl \
+RUN apt-get update -y && apt-get install -y libncursesw6 libncurses6 libcurl4 liblzma5 bzip2 zlib1g libdigest-perl-md5-perl \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 ARG SAMBLASTER_VERSION=0.1.26
